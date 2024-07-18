@@ -1,0 +1,67 @@
+.str0 {
+    stroke: #f7d774;
+    stroke-width: 16.93;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 22.9256;
+}
+
+.fil0 {
+    fill: none;
+}
+
+.rRmsJAYa_0 {
+    stroke-dasharray: 13074 13076;
+    stroke-dashoffset: 13075;
+}
+
+.start-geo-10 .rRmsJAYa_0 {
+    animation: rRmsJAYa_draw 800ms ease-in-out 0ms forwards;
+}
+
+.rRmsJAYa_1 {
+    stroke-dasharray: 21154 21156;
+    stroke-dashoffset: 21155;
+}
+
+.start-geo-10 .rRmsJAYa_1 {
+    animation: rRmsJAYa_draw 800ms ease-in-out 133ms forwards;
+}
+
+.rRmsJAYa_2 {
+    stroke-dasharray: 13074 13076;
+    stroke-dashoffset: 13075;
+}
+
+.start-geo-10 .rRmsJAYa_2 {
+    animation: rRmsJAYa_draw 800ms ease-in-out 266ms forwards;
+}
+
+.rRmsJAYa_3 {
+    stroke-dasharray: 21154 21156;
+    stroke-dashoffset: 21155;
+}
+
+.start-geo-10 .rRmsJAYa_3 {
+    animation: rRmsJAYa_draw 800ms ease-in-out 400ms forwards;
+}
+
+@keyframes rRmsJAYa_draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes rRmsJAYa_fade {
+    0% {
+        stroke-opacity: 1;
+    }
+
+    92.5925925925926% {
+        stroke-opacity: 1;
+    }
+
+    100% {
+        stroke-opacity: 0;
+    }
+}

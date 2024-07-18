@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 -4.5 20 20"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="arrow-up.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.025"
+     inkscape:cx="399.5122"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">arrow_up [#337]</title>
+  <desc
+     id="desc1">Created with Sketch.</desc>
+  <defs
+     id="defs1" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     style="fill:#5f3b9d;fill-opacity:1;stroke:#000000;stroke-width:0.12750005;stroke-dasharray:none;stroke-opacity:1"
+     transform="matrix(0.98048969,0,0,0.98029382,0.19632284,-0.02437251)">
+    <g
+       id="Dribbble-Light-Preview"
+       transform="translate(-260,-6684)"
+       fill="#000000"
+       style="fill:#5f3b9d;fill-opacity:1;stroke:#000000;stroke-width:0.12750005;stroke-dasharray:none;stroke-opacity:1">
+      <g
+         id="icons"
+         transform="translate(56,160)"
+         style="fill:#5f3b9d;fill-opacity:1;stroke:#000000;stroke-width:0.12750005;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           d="m 223.70769,6534.6338 v 0 c 0.38975,-0.4049 0.38975,-1.0604 0,-1.4643 l -8.26356,-8.5629 c -0.78049,-0.8088 -2.04666,-0.8088 -2.82714,0 l -8.32453,8.625 c -0.38575,0.4008 -0.39074,1.048 -0.01,1.4539 0.38874,0.4153 1.02932,0.4194 1.42406,0.011 l 7.61699,-7.8939 c 0.39074,-0.4049 1.02333,-0.4049 1.41407,0 l 7.55703,7.8308 c 0.38975,0.4049 1.02333,0.4049 1.41307,0"
+           id="arrow_up-[#337]"
+           style="fill:#5f3b9d;fill-opacity:1;stroke:#000000;stroke-width:0.12750005;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

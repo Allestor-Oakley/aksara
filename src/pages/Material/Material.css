@@ -1,0 +1,88 @@
+:root {
+    --visible-circ-mat: 5;
+    --content-mat-name: "";
+}
+
+/* This shit feels illegal
+ * this will select .blocks-main, but only if it has .material-circle
+ * as its child, this is for the material name preview on top
+ * it will changed based on --content-mat-name that will be change
+ * in useEffect
+ * */
+div:has(> div > .material-circle)::before {
+    content: var(--content-mat-name);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 40px;
+    font-weight: 600;
+    color: white;
+}
+
+.material-name {
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.material-circle {
+    width: calc(100% / var(--visible-circ-mat));
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.material-circle img {
+    height: 100px;
+}
+
+div:has(> .material-circle) {
+    /* all of this, just to make the slide start from the middle, and not
+     * from the furthest left side, 45px is just half the size of the image
+     * */
+    margin-left: calc(50% - 45px);
+}
+
+.material-circle img {
+    transition: all 0.4s linear;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.material-circle:not(.big-mat-circ) img {
+    filter: brightness(60%);
+}
+
+.material-circle.big-mat-circ img {
+    transform: scale(2);
+}
+
+/* Line */
+.material-circle:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    margin: auto 0;
+    width: 100%;
+    height: 20px;
+    background: var(--purple2);
+    z-index: -1;
+}
+
+@media screen and (max-width: 1450px) {
+    :root {
+        --visible-circ-mat: 3;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .material-circle img {
+        height: 80px;
+    }
+
+    :root {
+        --visible-circ-mat: 2;
+    }
+}

@@ -1,0 +1,66 @@
+
+/* Hide grade block when it's not the curren slide: animation */
+.gradeblock {
+    transition: all 0.5s linear;
+}
+.gradeblock.hide-grade {
+    transform: scale(0.2);
+    opacity: 0.5;
+}
+
+/*
+ * .grade-container
+ * -> .grade-circle
+ * -> GeoElem (svg)
+ * */
+.grade-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.8s linear;
+}
+
+/* Style grade circle */
+.grade-circle {
+    height: 90%;
+    width: 90%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 3px solid var(--purple3);
+    color: var(--purple2);
+    font-size: 150px;
+    font-weight: 600;
+
+    /* just hover animation */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.grade-circle:hover {
+    transform: scale(1.05);
+}
+
+/* Put the Geometry behind the grade circle */
+.grade-container > svg {
+    position: absolute;
+    height: 130%;
+    width: 130%;
+    top: -15%;
+    left: -15%;
+    z-index: 1;
+}
+
+/* I put !important, because I don't want to write this
+ * for every single Geo...tsx file
+ * */
+.grade-container > svg *{
+    animation-delay: 0.2s !important;
+}

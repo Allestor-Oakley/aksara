@@ -1,0 +1,38 @@
+.pdfview-cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* for slide */
+.pdfview-slide {
+    display: flex;
+    flex-direction: column;
+    /* 3 is rangkuman, contoh soal, latihan soal*/
+    height: calc(3 * 100%);
+    width: min(800px, 100%);
+    transition: all 1s ease-in-out;
+}
+
+.pdfview-cont object {
+    height: 100%;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* hide button if it isn't needed */
+.pdf-control-btn {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.pdf-control-btn div {
+    margin: 0 20px;
+}
+.pdf-control-btn div.hide-button {
+    display: none;
+}

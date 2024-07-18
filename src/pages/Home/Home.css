@@ -1,0 +1,369 @@
+.home {
+    height: 100dvh;
+    width: 100vw;
+    background-color: var(--purple1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --delta-planet-home: 18px;
+    --padding-logo-home: 20px;
+    --satellite-size-home: 120px;
+    --pulse-width-home: 40px;
+    --logo-width-home: 350px;
+}
+
+/* Aksara Logo */
+.home .logo-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+
+    width: var(--logo-width-home);
+}
+
+.home .logo-button__logo {
+    padding: var(--padding-logo-home);
+    background-color: white;
+    border-radius: 50%;
+    height: min-content;
+    width: min-content;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.home .logo__mono {
+    position: absolute;
+    top: var(--padding-logo-home);
+    left: var(--padding-logo-home);
+}
+
+.home .logo-button__logo > * {
+    max-width: calc(var(--logo-width-home) - var(--padding-logo-home));
+    aspect-ratio: 1/1;
+}
+
+/* "MULAI" button */
+.home .logo-button__button {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    transition: filter 0.1s ease-in-out;
+}
+.home .logo-button a {
+    width: 100%;
+}
+
+.home .logo-button__button p {
+    font-size: 40px;
+}
+
+/* Big Satellites
+ * .big-sat > .big-sat__grid > .big-sat__image
+ * container (.big-sat) and its grid is separated so that container (which have background
+ * to block .starry-background) doesn't get animated
+ * */
+.home .big-sat {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 80%;
+    width: 70%;
+    border-radius: 1000px;
+    background-color: var(--purple1);
+    background: radial-gradient(#2e3353ff 65%, #2e335300 100%);
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.home .big-sat__grid {
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        "s1 . s2"
+        "s3 . s4";
+    animation: 4s linear grow-size;
+}
+
+.home .big-sat__image {
+    height: var(--satellite-size-home);
+}
+
+/* Small Satellites
+ * .small-sat > .small-sat__image
+ * */
+.home .small-sat {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        ". s1 . s2. "
+        "s3 . . . s4"
+        ". s5 . s6. ";
+    z-index: 3;
+    grid-row-gap: 150px;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.home .small-sat__image {
+    height: calc(var(--satellite-size-home) / 2);
+}
+
+/* ANIMATION */
+/*
+ * Note that the 'aksara-mono' svg animation takes 2.5s,
+ * and its animation is written inside the svg file itself
+ * */
+
+/*LOGO AKSARA animation:
+ * Aksara-logo fade-in
+*/
+.home .logo__colored {
+    animation: 1s linear fade-in;
+    animation-fill-mode: backwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*SATELLITE intro:
+ * Satellite circling intro, and a little bit of fade in
+*/
+.home .big-sat__grid {
+    animation: 4.5s cubic-bezier(0.22, 1, 0.36, 1) grow-size, 2s linear fade-in;
+}
+
+.home .small-sat {
+    animation: 4.5s cubic-bezier(0.22, 1, 0.36, 1) grow-size2, 2s linear fade-in;
+}
+
+@keyframes grow-size {
+    from {
+        transform: scale(0) rotate(270deg);
+    }
+
+    to {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes grow-size2 {
+    from {
+        transform: scale(0) rotate(-270deg);
+    }
+
+    to {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* SATELLITE animation:
+ * Satellite floating animation,
+ * big satellite move in the opposite direction to small satellite
+ * to make it looks 'chaotic'
+*/
+.home .big-sat__image,
+.home .small-sat__image {
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4.7s;
+}
+
+.home .big-sat__image {
+    animation-name: floating;
+}
+
+.home .small-sat__image {
+    animation-name: floating2;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(calc(-1*var(--delta-planet-home)));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes floating2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(var(--delta-planet-home));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* "MULAI" animation:
+ * fade-in button and slide-in in "MULAI" text
+ * */
+.home .logo-button__button::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 400px;
+    background: white;
+    right: 20px;
+    left: auto;
+    animation: 4.5s linear fade-to-left;
+}
+
+@keyframes fade-to-left {
+    0% {
+        width: 80%;
+    }
+
+    80% {
+        width: 80%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.home .logo-button__button {
+    animation: fade-in 1.5s linear;
+}
+
+/* LOGO BACKGROUND animation:
+ * Pulse animation and white background intro
+ * */
+.home .logo-button__logo {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    animation: pulse 1.8s infinite 4.5s, background-in 1.5s forwards;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+    }
+
+    80% {
+        box-shadow: 0 0 0 var(--pulse-width-home) rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255 0);
+    }
+}
+
+@keyframes background-in {
+    from {
+        background-color: var(--purple1);
+    }
+}
+
+/**/
+@media screen and (orientation: portrait){
+    /* For phone or tablet, grow and circling looks weird in portrait */
+    @keyframes grow-size {
+        from {
+            transform: scale(0) rotate(0deg);
+        }
+
+        to {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+    @keyframes grow-size2 {
+        from {
+            transform: scale(0) rotate(0deg);
+        }
+
+        to {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
+    .home .big-sat, .home .small-sat {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:1024px) and (orientation: landscape){
+    .home {
+        --satellite-size-home: 100px;
+        --logo-width-home: 200px;
+    }
+    .home .logo-button__button p{
+        font-size: 30px;
+    }
+}
+
+/*Tablet portrait*/
+@media screen and (max-width:900px) and (orientation: portrait){
+    .home {
+        --logo-width-home: 300px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .home {
+        --satellite-size-home: 75px;
+        --padding-logo-home: 15px;
+        --pulse-width-home: 20px;
+        --logo-width-home: 200px;
+    }
+    .home .big-sat {
+        width: 100%;
+        height: 70%;
+    }
+    .home .small-sat {
+        height: 100%;
+        row-gap: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        --satellite-size-home: 70px;
+    }
+    .home .logo-button__logo > * {
+        height: 180px;
+        width: 180px;
+    }
+    .home .logo-button__button p{
+        font-size: 25px;
+    }
+    .home .small-sat {
+        height: 80%;
+    }
+}

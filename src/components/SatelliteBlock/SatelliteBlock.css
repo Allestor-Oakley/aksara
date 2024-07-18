@@ -1,0 +1,51 @@
+.satblock {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Subject Logo */
+.satblock .satblock-main-img {
+    z-index: 4;
+    height: 250px;
+    width: 250px;
+}
+
+/* Satellites */
+.satblock .satellites {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    margin: auto 0;
+    z-index: 2;
+}
+
+.satblock .satellites img {
+    border-radius: 400px;
+    background-color: var(--red1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    color: white;
+    font-size: 20px;
+
+    /* for orbiting looping animation */
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+/* Animation */
+/* Intro: Satellites circling-out and expanding from behind the logo */
+.satblock .satellites {
+    animation: 1.2s expand-sat ease-in-out;
+}
+
+@keyframes expand-sat {
+    from {transform: scale(0) rotate(-60deg);}
+    to {transform: scale(1) rotate(0deg);}
+}

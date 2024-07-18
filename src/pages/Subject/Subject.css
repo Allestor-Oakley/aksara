@@ -1,0 +1,26 @@
+/* For hiding animation if it is not the current block */
+.main .subjectblock {
+    transition: all 0.7s ease-in-out;
+}
+.main .subjectblock.hide-planet{
+    transform: scale(0.3);
+    opacity: 0.3;
+}
+
+/* Planet subject ring image
+ * bigger if hovered, and intro animation (TODO make this intro better)
+ * */
+.planet-subject-ring{
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    animation: 1.5s show-img ease-in-out;
+}
+.planet-subject-ring:hover{
+    transform: scale(1.1);
+}
+@keyframes show-img {
+    from {filter: brightness(80%);}
+}

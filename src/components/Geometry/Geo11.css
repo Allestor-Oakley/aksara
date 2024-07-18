@@ -1,0 +1,193 @@
+.str0 {
+    stroke: #bfecd1;
+    stroke-width: 16.93;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 22.9256;
+}
+
+.fil0 {
+    fill: none;
+}
+
+.vWAgXItI_0 {
+    stroke-dasharray: 12701 12703;
+    stroke-dashoffset: 12702;
+}
+
+.start-geo-11 .vWAgXItI_0 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_1 {
+    stroke-dasharray: 7900 7902;
+    stroke-dashoffset: 7901;
+}
+
+.start-geo-11 .vWAgXItI_1 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_2 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_2 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_3 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_3 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_4 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_4 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_5 {
+    stroke-dasharray: 4234 4236;
+    stroke-dashoffset: 4235;
+}
+
+.start-geo-11 .vWAgXItI_5 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_6 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_6 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_7 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_7 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_8 {
+    stroke-dasharray: 4234 4236;
+    stroke-dashoffset: 4235;
+}
+
+.start-geo-11 .vWAgXItI_8 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_9 {
+    stroke-dasharray: 12701 12703;
+    stroke-dashoffset: 12702;
+}
+
+.start-geo-11 .vWAgXItI_9 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_10 {
+    stroke-dasharray: 7900 7902;
+    stroke-dashoffset: 7901;
+}
+
+.start-geo-11 .vWAgXItI_10 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_11 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_11 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_12 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_12 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_13 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_13 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_14 {
+    stroke-dasharray: 4234 4236;
+    stroke-dashoffset: 4235;
+}
+
+.start-geo-11 .vWAgXItI_14 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_15 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_15 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_16 {
+    stroke-dasharray: 3667 3669;
+    stroke-dashoffset: 3668;
+}
+
+.start-geo-11 .vWAgXItI_16 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+.vWAgXItI_17 {
+    stroke-dasharray: 4234 4236;
+    stroke-dashoffset: 4235;
+}
+
+.start-geo-11 .vWAgXItI_17 {
+    animation: vWAgXItI_draw 1200ms ease-in-out 0ms forwards;
+}
+
+@keyframes vWAgXItI_draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes vWAgXItI_fade {
+    0% {
+        stroke-opacity: 1;
+    }
+
+    92.5925925925926% {
+        stroke-opacity: 1;
+    }
+
+    100% {
+        stroke-opacity: 0;
+    }
+}

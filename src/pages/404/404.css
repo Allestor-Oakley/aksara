@@ -1,0 +1,15 @@
+/* Just a simple 404 pages, centered vertically and horizontally*/
+.block-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+.block-404 > * {
+    margin: 20px 0;
+    text-align: center;
+}
