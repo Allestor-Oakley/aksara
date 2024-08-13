@@ -35,75 +35,73 @@ function Home() {
     ];
 
     return (
-            <div
-                className="home"
-                style={{
-                    backgroundImage: `url(${StarrySky})`,
-                    backgroundRepeat: "repeat",
-                    backgroundSize: "contain",
-                }}
-            >
-                <div className="logo-button">
-                    {/* Aksara Logo */}
-                    <div className="logo-button__logo">
-                        <SuspenseImage
-                            className="logo__colored"
-                            src={LogoAksara}
-                            alt="Logo Aksara"
-                        />
-                        <object
-                            className="logo__mono"
-                            data={LogoMonoAksara}
-                        ></object>
-                    </div>
-
-                    {/* MULAI button */}
-                    <Link to="/subject" style={{ textDecoration: "none" }}>
-                        <div className="logo-button__button aks-btn">
-                            <p>MULAI</p>
-                        </div>
-                    </Link>
+        <div
+            className="home"
+            style={{
+                backgroundImage: `url(${StarrySky})`,
+                backgroundRepeat: "repeat",
+                backgroundSize: "contain",
+            }}
+        >
+            <div className="logo-button">
+                {/* Aksara Logo */}
+                <div className="logo-button__logo">
+                    <SuspenseImage
+                        className="logo__colored"
+                        src={LogoAksara}
+                        alt="Logo Aksara"
+                    />
+                    <object
+                        className="logo__mono"
+                        data={LogoMonoAksara}
+                    ></object>
                 </div>
 
-                {/*
+                {/* MULAI button */}
+                <Link to="/subject" style={{ textDecoration: "none" }}>
+                    <div className="logo-button__button aks-btn">
+                        <p>MULAI</p>
+                    </div>
+                </Link>
+            </div>
+
+            {/*
                     Big satellites
                     big-sat and big-sat__grid is separated,
                     so that big-sat doesn't get animated, because big-sat
                     has background to cover StarrySky background
                 */}
-                <div className="big-sat">
-                    <div className="big-sat__grid">
-                        {big_sat.map((v, i) => {
-                            return (
-                                <SuspenseImage
-                                    src={getImgUrl(`planets/${v}.png`)}
-                                    alt={v}
-                                    style={{ gridArea: "s" + (i + 1) }}
-                                    className="big-sat__image"
-                                    key={i}
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Small satellites */}
-                <div className="small-sat">
-                    {small_sat.map((v, i) => {
+            <div className="big-sat">
+                <div className="big-sat__grid">
+                    {big_sat.map((v, i) => {
                         return (
                             <SuspenseImage
-                                src={getImgUrl(
-                                    `planets/${v[0]}-sat/${v[1]}.png`
-                                )}
-                                alt={v[1]}
+                                src={getImgUrl(`planets/${v}.png`)}
+                                alt={v}
                                 style={{ gridArea: "s" + (i + 1) }}
-                                className="small-sat__image"
+                                className="big-sat__image"
                                 key={i}
                             />
                         );
                     })}
                 </div>
             </div>
+
+            {/* Small satellites */}
+            <div className="small-sat">
+                {small_sat.map((v, i) => {
+                    return (
+                        <SuspenseImage
+                            src={getImgUrl(`planets/${v[0]}-sat/${v[1]}.png`)}
+                            alt={v[1]}
+                            style={{ gridArea: "s" + (i + 1) }}
+                            className="small-sat__image"
+                            key={i}
+                        />
+                    );
+                })}
+            </div>
+        </div>
     );
 }
 
